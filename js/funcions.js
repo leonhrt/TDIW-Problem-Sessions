@@ -7,4 +7,7 @@ function confirmaRegistre(){
 
 async function carregaMencions(){
     //completa
+    let response    = await fetch("http://localhost:80/mencions.php?grau=" + document.getElementById("graus").value);
+    let options     = await response.text()
+    document.getElementById("mencions").innerHTML = options;
 }
